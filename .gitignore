@@ -1,0 +1,9 @@
+# CSS/Web specific
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+dist/
+build/
+.cache/
+.parcel-cache/
