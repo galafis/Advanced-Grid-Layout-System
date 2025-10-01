@@ -1,0 +1,16 @@
+graph TD
+    A[Usuário] -->|Acessa| B(GitHub Pages)
+    B -->|Serve| C[index.html]
+    C -->|Linka| D[styles.css]
+    C -->|Executa| E[script.js]
+    E -->|Interage com| C
+    D -->|Aplica estilos a| C
+    subgraph Fluxo de Trabalho de Desenvolvimento
+        F[Desenvolvedor] -->|Escreve/Edita| G(src/index.html)
+        F -->|Escreve/Edita| H(src/styles.css)
+        F -->|Escreve/Edita| I(src/script.js)
+        F -->|Escreve/Edita| J(tests/test.js)
+        J -->|Executa com| K(Jest)
+        K -->|Testa| G,H,I
+        F -->|Implanta em| B
+    end

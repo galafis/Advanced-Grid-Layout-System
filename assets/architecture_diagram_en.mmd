@@ -1,0 +1,16 @@
+graph TD
+    A[User] -->|Accesses| B(GitHub Pages)
+    B -->|Serves| C[index.html]
+    C -->|Links| D[styles.css]
+    C -->|Executes| E[script.js]
+    E -->|Interacts with| C
+    D -->|Applies styles to| C
+    subgraph Development Workflow
+        F[Developer] -->|Writes/Edits| G(src/index.html)
+        F -->|Writes/Edits| H(src/styles.css)
+        F -->|Writes/Edits| I(src/script.js)
+        F -->|Writes/Edits| J(tests/test.js)
+        J -->|Runs with| K(Jest)
+        K -->|Tests| G,H,I
+        F -->|Deploys to| B
+    end
