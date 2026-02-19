@@ -1,5 +1,14 @@
 # Advanced-Grid-Layout-System
 
+<div align="center">
+
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS Grid](https://img.shields.io/badge/CSS_Grid-Layout-blueviolet?style=for-the-badge)
+
+</div>
+
 ## English
 
 ### 🚀 Overview
@@ -77,13 +86,24 @@ Advanced-Grid-Layout-System/
 
 ### 📈 Architecture Diagram
 
-![Architecture Diagram (English)](../assets/architecture_diagram_en.png)
-
----
-
-### 📈 Diagrama de Arquitetura
-
-![Diagrama de Arquitetura (Português)](../assets/architecture_diagram_pt.png)
+```mermaid
+flowchart TD
+    A[CSS Custom Properties\n:root variables] --> B[Grid Definitions]
+    B --> C1[grid-template-columns]
+    B --> C2[grid-template-rows]
+    B --> C3[grid-template-areas]
+    C1 & C2 & C3 --> D[Responsive Breakpoints]
+    D --> E1[Desktop\n≥ 1024px\nFull multi-column grid]
+    D --> E2[Tablet\n768px – 1023px\nAdapted mid-size grid]
+    D --> E3[Mobile\n< 768px\nSingle-column stack]
+    E1 & E2 & E3 --> F[Layout Rendering]
+    F --> G1[Header Area]
+    F --> G2[Sidebar Area]
+    F --> G3[Main Content Area]
+    F --> G4[Footer Area]
+    G1 & G2 & G3 & G4 --> H[Dark Mode Layer\nCSS class toggle]
+    H --> I[Final Rendered Page]
+```
 
 
 ### 🤝 Contributing
@@ -182,7 +202,24 @@ Advanced-Grid-Layout-System/
 ```
 ### 📈 Diagrama de Arquitetura
 
-![Diagrama de Arquitetura (Português)](../assets/architecture_diagram_pt.png)
+```mermaid
+flowchart TD
+    A[Propriedades CSS Customizadas\nvariáveis :root] --> B[Definições de Grid]
+    B --> C1[grid-template-columns]
+    B --> C2[grid-template-rows]
+    B --> C3[grid-template-areas]
+    C1 & C2 & C3 --> D[Breakpoints Responsivos]
+    D --> E1[Desktop\n≥ 1024px\nGrid multi-coluna completo]
+    D --> E2[Tablet\n768px – 1023px\nGrid adaptado médio]
+    D --> E3[Mobile\n< 768px\nEmpilhamento em coluna única]
+    E1 & E2 & E3 --> F[Renderização do Layout]
+    F --> G1[Área do Cabeçalho]
+    F --> G2[Área da Barra Lateral]
+    F --> G3[Área do Conteúdo Principal]
+    F --> G4[Área do Rodapé]
+    G1 & G2 & G3 & G4 --> H[Camada Dark Mode\nalternância via classe CSS]
+    H --> I[Página Final Renderizada]
+```
 
 
 ### 🤝 Contributingo
